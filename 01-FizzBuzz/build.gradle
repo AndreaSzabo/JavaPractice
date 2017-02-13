@@ -1,19 +1,15 @@
-apply plugin: 'java'
-
-dependencies {
-  testCompile 'junit:junit:4.12'
+jar {
+	manifest {
+		attributes 'Implementation-Title': '01-FizzBuzz'
+		attributes 'Main-Class': 'com.java.Main'
+	}
+	archiveName 'FizzBuzz.jar'
 }
 
 sourceSets {
-   main {
-      java {
-         srcDir 'src'
-      }
-   }
-	
-   test {
-      java {
-         srcDir 'test'
-      }
-   }
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
 }
